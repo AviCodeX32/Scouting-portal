@@ -123,10 +123,10 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialMode 
   };
 
   // Quick fill helper for testing
-  const quickFillPlayer = (ign, uid) => {
+  const quickFillPlayer = (ign, uid, pwd = 'password123') => {
     setLoginForm({
       player_id: uid || ign,
-      password: 'password123'
+      password: pwd
     });
   };
 
@@ -238,17 +238,17 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialMode 
               <div className="flex flex-wrap gap-2">
                 <button
                   type="button"
-                  onClick={() => quickFillPlayer('Jonathan', '5124829104')}
+                  onClick={() => quickFillPlayer('ViperOP', '5678901234', 'Viper@2026')}
                   className="px-2.5 py-1 rounded bg-[#182030] hover:bg-slate-700 text-[11px] font-mono text-krafton-gold border border-krafton-border"
                 >
-                  ⚡ Jonathan (UID: 5124829104)
+                  ⚡ ViperOP (Player UID: 5678901234)
                 </button>
                 <button
                   type="button"
-                  onClick={() => quickFillPlayer('Manya', '5284910382')}
+                  onClick={() => quickFillPlayer('NinjaScout', '5890123456', 'Scout@2026')}
                   className="px-2.5 py-1 rounded bg-[#182030] hover:bg-slate-700 text-[11px] font-mono text-emerald-400 border border-krafton-border"
                 >
-                  ⚡ Manya (UID: 5284910382)
+                  ⚡ NinjaScout (Scout UID: 5890123456)
                 </button>
               </div>
             </div>
